@@ -4,45 +4,241 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ARC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/arcik.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/swiper-bundle.min.css">
+    <link rel="shortcut icon" href="~/assets/icon/Favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/icon/Favicon.png">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ARC</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+<body class="header-fixed counter-scroll">
+
+    <div class="preload preload-container">
+        <div class="preload-logo"></div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - ARC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div id="wrapper" class="animsition">
+        <div id="page" class="clearfix">
+
+            <div id="site-header-wrap">
+                <div id="top-bar">
+                    <div id="top-bar-inner">
+                        <div class="top-bar-inner-wrap">
+                            <div class="top-bar-content">
+                                <div class="inner link-style-2">
+                                    <div class="top-bar-left">
+                                        <span class="content"><a href="https://themesflat.com/cdn-cgi/l/email-protection#89e6e5fcf1a7edecfae0eee7c9eee4e8e0e5a7eae6e4"><span class="__cf_email__" data-cfemail="fd94939b92bd8a989f909c9491d39e9290">[email&#160;protected]</span></a></span>
+                                        <span class="content"><a href="tel:012345678">09897687462</a></span>
+                                    </div>
+                                    <div class="top-bar-right">
+                                        <ul class="list-content content">
+                                            <li> <a href="#">FB</a></li>
+                                            <li> <a href="#">TW</a></li>
+                                            <li> <a href="#">BE</a></li>
+                                            <li> <a href="#">DR</a></li>
+                                            <li> <a href="#">LI</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <header id="site-header">
+                    <div id="site-logo" class="clearfix">
+                        <div id="site-log-inner">
+                            <a href="index.html" rel="home" class="main-logo">
+                                <img src="~/assets/images/logo/logo-header.png" alt="arcik" width="100" height="44" data-retina="assets/images/logo/logo-header@2x.png" data-width="100" data-height="44">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile-button">
+                        <span></span>
+                    </div>
+                    <div id="site-header-inner">
+                        <div class="wrap-inner clearfix">
+                            <nav id="main-nav" class="main-nav">
+                                <ul id="menu-primary-menu" class="menu">
+                                    <li class="menu-item">
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children">
+                                        <a>Services</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a asp-controller="Home" asp-action="Residential">Residential Project</a></li>
+                                            <li class="menu-item">
+                                                <a asp-controller="Home" asp-action="Comercial">Comercial Project</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-has-children">
+                                        <a>Blogs</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a asp-controller="Home" asp-action="ResidentialBlog">Residential Blog</a></li>
+                                            <li class="menu-item">
+                                                <a asp-controller="Home" asp-action="ComercialBlog">Comercial Blog</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a asp-controller="Home" asp-action="AboutUs">About Us</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+                    </div>
+
+                    <div class="navigation-side-menu icon-icon">
+                    </div>
+                </header>
+
+                <div class="side-menu__block">
+                    <div class="side-menu__block-overlay custom-cursor__overlay">
+                        <div class="cursor"></div>
+                        <div class="cursor-follower"></div>
+                    </div>
+                    <div class="side-menu__block-inner">
+                        <div class="side-menu__top justify-content-end">
+                            <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/icon/close-1-1.png" alt="images"></a>
+                        </div>
+                        <div class="side-menu__top-introduce">
+                            <a href="index.html" rel="home" class="main-logo">
+                                <img src="assets/images/logo/logo-header.png" alt="arcik" width="100" height="44" data-retina="assets/images/logo/logo-header@2x.png" data-width="100" data-height="44">
+                            </a>
+                            <p>
+                                Etiam efficitur, metus in cursus imperdiet, neque nisl porta erat, nec volutpat
+                                felis lacus a tellus. Nunc tristique nulla nisi.
+                            </p>
+                        </div>
+                        <div class="widget search">
+                            <div class="widget-title">
+                                <h2>Search Here</h2>
+                            </div>
+                            <form action="#" method="get" role="search" class="search-form">
+                                <input type="search" class="search-field" placeholder="Search your keyword..." value="" name="s" title="Search for" required="">
+                                <button class="search-icon search-submit" type="submit" title="Search"></button>
+                            </form>
+                        </div>
+                        <div class="side-menu__top-category">
+                            <div class="widget widget-categories">
+                                <div class="widget-title">
+                                    <h2>Categories</h2>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="blog.html">Business</a>
+                                        <div class="number">26</div>
+                                    </li>
+                                    <li class="active">
+                                        <a href="blog.html">Consultant</a>
+                                        <div class="number">30</div>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">Creative</a>
+                                        <div class="number">71</div>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">UI/UX</a>
+                                        <div class="number">56</div>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">Teachnology</a>
+                                        <div class="number">60</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+
+            <footer id="footer" class="clearfix">
+                <div class="footer-content container-fluid">
+                    <div class="row">
+                        <div class="footer-left">
+                            <a id="scroll-top">
+                                <span>
+                                    BACK TO<br>
+                                    TOP
+                                </span>
+                            </a>
+                            <div class="texts">
+                                <h1>Arcik.</h1>
+                            </div>
+                        </div>
+                        <div class="footer-right">
+                            <div class="content">
+                                <h4>CONTACT</h4>
+                                <h2>Get In Touch</h2>
+                                <div class="widget-information">
+                                    <ul>
+                                        <li><span class="item location"></span><span class="texts">Great Russell St, London, WC1B 3DG</span></li>
+                                        <li><span class="item phone"></span><span class="texts"><a href="tel:012345678">+ (0712) 819 79 555</a></span></li>
+                                        <li><span class="item mail"></span><span class="texts"><a href="https://themesflat.com/cdn-cgi/l/email-protection#7a13141c153a1f021b170a161f54191517"><span class="__cf_email__" data-cfemail="fd94939b92bd98859c908d9198d39e9290">[email&#160;protected]</span></a></span></li>
+                                    </ul>
+                                </div>
+                                <div class="button-footer">
+                                    <a href="contact.html" class="button btn-style3">
+                                        <span>Get Directions</span>
+                                    </a>
+                                </div>
+                                <div class="widget-links">
+                                    <ul class="links-wrap">
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="portfolio-masonary.html">Projects</a></li>
+                                        <li><a href="pricing.html" class="active">Pricing</a></li>
+                                        <li><a href="team.html">Team</a></li>
+                                        <li><a href="faq.html">Faq</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div id="bottom" class="clearfix has-spacer">
+                <div id="bottom-bar-inner" class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="bottom-content-left link-style-4">Copyright © 2021 The Arcik HTML Template. Design by <a href="https://themeforest.net/user/themesflat/portfolio">themesflat</a></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bottom-bar-menu">
+                                <ul class="menu-bottom-menu link-style-4">
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="pricing.html">Pricing</a> </li>
+                                    <li><a href="team.html">Team</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    </div>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/countto.js"></script>
+    <script src="~/assets/js/wow.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/shortcodes.js"></script>
+    <script src="~/assets/js/jquery.easing.js"></script>
+    <script src="~/assets/js/jquery.fancybox.js"></script>
+    <script src="~/assets/js/plugin.js"></script>
+
+    <script src="~/assets/js/swiper-bundle.min.js"></script>
+    <script src="~/assets/js/swiper.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

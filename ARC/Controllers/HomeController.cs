@@ -22,6 +22,39 @@ namespace ARC.Controllers
         {
             return View();
         }
+        public IActionResult Residential()
+        {
+            return View();
+        }
+
+        public IActionResult Comercial()
+        {
+            return View();
+        }
+        public IActionResult WorkDetails(string work)
+        {
+            ViewData["work"] = work;
+            return View();
+        }
+
+        public IActionResult ComercialProjectDetails()
+        {
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult ResidentialBlog()
+        {
+            return View();
+        }
+        public IActionResult ComercialBlog()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

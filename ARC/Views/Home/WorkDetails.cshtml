@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "WorkDetails";
+}
+
+<section class="flat-title-page">
+    <div class="container">
+        <div class="row">
+            <div class="breadcrumbs">
+                <div class="breadcrumb-trail link-style-2">
+                    <a class="home" href="/">HOME</a><span>Residential Project</span>
+                </div>
+                <h2 class="section-title-page">
+                    @if ((ViewData["work"] as string) == "comercial")
+                    {
+                        <span id="workname">
+                            Project Details
+                        </span>
+                    }
+                    else
+                    {
+                        <span id="workname">
+                            Test
+                        </span>
+                    }
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if ((ViewData["work"] as string) == "comercial")
+{
+    <partial name="_workComercial" />
+}
+else
+{
+    <partial name="_workResidential" />
+
+    @section Scripts{
+        <script>
+            $(document).ready(function () {
+                var querystring = new URLSearchParams(location.search).get("work");
+                $("#workname").text(querystring)
+            })
+        </script>
+    }
+}
