@@ -33,6 +33,7 @@ namespace ARC.Controllers
         }
         public IActionResult WorkDetails(string work)
         {
+
             ViewData["work"] = work;
             return View();
         }
