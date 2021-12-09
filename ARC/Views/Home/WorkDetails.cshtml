@@ -32,6 +32,65 @@
 @if ((ViewData["work"] as string) == "comercial")
 {
     <partial name="_workComercial" />
+    @section Scripts{
+        <script>
+            $("#allwork").click(function () {
+                $("#allwork").addClass("active");
+                $("#btncorporate").removeClass("active");
+                $("#btnofficerene").removeClass("active");
+                $("#btnindutrial").removeClass("active");
+                $("#btnturnkey").removeClass("active");
+                $("#corporate").show();
+                $("#officerene").show();
+                $("#indutrial").show();
+                $("#turnkey").show();
+            })
+            $("#btncorporate").click(function () {
+                $("#btncorporate").addClass("active");
+                $("#allwork").removeClass("active");
+                $("#btnofficerene").removeClass("active");
+                $("#btnindutrial").removeClass("active");
+                $("#btnturnkey").removeClass("active");
+                $("#corporate").show();
+                $("#officerene").hide();
+                $("#indutrial").hide();
+                $("#turnkey").hide();
+            })
+            $("#btnofficerene").click(function () {
+                $("#btnofficerene").addClass("active");
+                $("#allwork").removeClass("active");
+                $("#btncorporate").removeClass("active");
+                $("#btnindutrial").removeClass("active");
+                $("#btnturnkey").removeClass("active");
+                $("#corporate").hide();
+                $("#officerene").show();
+                $("#indutrial").hide();
+                $("#turnkey").hide();
+            })
+            $("#btnindutrial").click(function () {
+                $("#btnindutrial").addClass("active");
+                $("#allwork").removeClass("active");
+                $("#btncorporate").removeClass("active");
+                $("#btnofficerene").removeClass("active");
+                $("#btnturnkey").removeClass("active");
+                $("#corporate").hide();
+                $("#officerene").hide();
+                $("#indutrial").show();
+                $("#turnkey").hide();
+            })
+            $("#btnturnkey").click(function () {
+                $("#btnturnkey").addClass("active");
+                $("#allwork").removeClass("active");
+                $("#btncorporate").removeClass("active");
+                $("#btnofficerene").removeClass("active");
+                $("#btnindutrial").removeClass("active");
+                $("#corporate").hide();
+                $("#officerene").hide();
+                $("#indutrial").hide();
+                $("#turnkey").show();
+            })
+        </script>
+    }
 }
 else
 {

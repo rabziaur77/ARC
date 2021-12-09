@@ -33,7 +33,6 @@ namespace ARC.Controllers
         }
         public IActionResult WorkDetails(string work)
         {
-
             ViewData["work"] = work;
             return View();
         }
@@ -44,6 +43,21 @@ namespace ARC.Controllers
         }
 
         public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        [ActionName("BlogDetails")]
+        public IActionResult Blogs()
+        {
+            return View();
+        }
+
+        public IActionResult Blog()
         {
             return View();
         }

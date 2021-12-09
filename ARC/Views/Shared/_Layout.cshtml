@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="~/assets/css/arcik.css">
     <link rel="stylesheet" type="text/css" href="~/assets/css/responsive.css">
     <link rel="stylesheet" type="text/css" href="~/assets/css/swiper-bundle.min.css">
+    <link href="~/css/site.css" rel="stylesheet" />
     <link rel="shortcut icon" href="~/assets/icon/Favicon.png">
     <link rel="apple-touch-icon-precomposed" href="~/assets/icon/Favicon.png">
 </head>
@@ -28,16 +29,15 @@
                             <div class="top-bar-content">
                                 <div class="inner link-style-2">
                                     <div class="top-bar-left">
-                                        <span class="content"><a href="https://themesflat.com/cdn-cgi/l/email-protection#89e6e5fcf1a7edecfae0eee7c9eee4e8e0e5a7eae6e4"><span class="__cf_email__" data-cfemail="fd94939b92bd8a989f909c9491d39e9290">[email&#160;protected]</span></a></span>
-                                        <span class="content"><a href="tel:012345678">09897687462</a></span>
+                                        <span class="content"><a><span>info@sbinteriorsolutions.net</span></a></span>
+                                        <span class="content"><a href="tel:08142666454">081426 66454</a></span>
                                     </div>
                                     <div class="top-bar-right">
                                         <ul class="list-content content">
-                                            <li> <a href="#">FB</a></li>
-                                            <li> <a href="#">TW</a></li>
-                                            <li> <a href="#">BE</a></li>
-                                            <li> <a href="#">DR</a></li>
-                                            <li> <a href="#">LI</a></li>
+                                            <li> <a href="https://www.facebook.com/sbinterior">FB</a></li>
+                                            <li> <a href="https://twitter.com/sbinteriorsol">TW</a></li>
+                                            <li> <a href="https://www.youtube.com/c/SbinteriorsolutionsNet">YT</a></li>
+                                            <li> <a href="https://sbinteriorsolutions.tumblr.com">TB</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -49,8 +49,10 @@
                 <header id="site-header">
                     <div id="site-logo" class="clearfix">
                         <div id="site-log-inner">
-                            <a href="index.html" rel="home" class="main-logo">
-                                <img src="~/assets/images/logo/logo-header.png" alt="arcik" width="100" height="44" data-retina="assets/images/logo/logo-header@2x.png" data-width="100" data-height="44">
+                            <a href="/" rel="home" class="main-logo">
+                                <img src="~/assets/images/logo/logo.jpg" alt="arcik" width="100" height="44"
+                                     style="width: 14em;"
+                                     data-retina="assets/images/logo/logo-header@2x.png" data-width="100" data-height="44">
                             </a>
                         </div>
                     </div>
@@ -69,24 +71,27 @@
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a asp-controller="Home" asp-action="Residential">Residential Project</a></li>
                                             <li class="menu-item">
-                                                <a asp-controller="Home" asp-action="Comercial">Comercial Project</a>
+                                                <a asp-controller="Home" asp-action="Comercial">Commercial Project</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children">
-                                        <a>Blogs</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a asp-controller="Home" asp-action="ResidentialBlog">Residential Blog</a></li>
-                                            <li class="menu-item">
-                                                <a asp-controller="Home" asp-action="ComercialBlog">Comercial Blog</a>
-                                            </li>
-                                        </ul>
+                                    <li class="menu-item">
+                                        <a asp-controller="Home" asp-action="Blog">Blog</a>
                                     </li>
+                                    @*<li class="menu-item menu-item-has-children">
+            <a>Blogs</a>
+            <ul class="sub-menu">
+                <li class="menu-item"><a asp-controller="Home" asp-action="ResidentialBlog">Residential Blog</a></li>
+                <li class="menu-item">
+                    <a asp-controller="Home" asp-action="ComercialBlog">Commercial Blog</a>
+                </li>
+            </ul>
+        </li>*@
                                     <li class="menu-item">
                                         <a asp-controller="Home" asp-action="AboutUs">About Us</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="/">Contact</a>
+                                        <a asp-controller="Home" asp-action="Contact">Contact</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -95,8 +100,8 @@
 
                     </div>
 
-                    <div class="navigation-side-menu icon-icon">
-                    </div>
+                    @*<div class="navigation-side-menu icon-icon">
+                        </div>*@
                 </header>
 
                 <div class="side-menu__block">
@@ -110,7 +115,7 @@
                         </div>
                         <div class="side-menu__top-introduce">
                             <a href="index.html" rel="home" class="main-logo">
-                                <img src="assets/images/logo/logo-header.png" alt="arcik" width="100" height="44" data-retina="assets/images/logo/logo-header@2x.png" data-width="100" data-height="44">
+                                <img src="assets/images/logo/logo.jpg" alt="arcik" width="100" height="44" data-retina="assets/images/logo/logo-header@2x.png" data-width="100" data-height="44">
                             </a>
                             <p>
                                 Etiam efficitur, metus in cursus imperdiet, neque nisl porta erat, nec volutpat
@@ -181,24 +186,37 @@
                                 <h2>Get In Touch</h2>
                                 <div class="widget-information">
                                     <ul>
-                                        <li><span class="item location"></span><span class="texts">Great Russell St, London, WC1B 3DG</span></li>
-                                        <li><span class="item phone"></span><span class="texts"><a href="tel:012345678">+ (0712) 819 79 555</a></span></li>
-                                        <li><span class="item mail"></span><span class="texts"><a href="https://themesflat.com/cdn-cgi/l/email-protection#7a13141c153a1f021b170a161f54191517"><span class="__cf_email__" data-cfemail="fd94939b92bd98859c908d9198d39e9290">[email&#160;protected]</span></a></span></li>
+                                        <li>
+                                            <span class="item location"></span>
+                                            <span class="texts">
+                                                No. 3, 1st floor, Sriven grand mall,, Miyapur, Bachupally - Miyapur road, Hyderabad,
+                                                Telangana 500049 04029884101
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="item phone"></span><span class="texts">
+                                                <a href="tel:04023046451">04023046451</a>,
+                                                &nbsp;&nbsp;<a href="tel:04029884101">04029884101</a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="item mail"></span><span class="texts">
+                                                <a href="https://themesflat.com/cdn-cgi/l/email-protection#7a13141c153a1f021b170a161f54191517">
+                                                    <span class="__cf_email__" data-cfemail="fd94939b92bd98859c908d9198d39e9290">
+                                                        info@sbinteriorsolutions.net
+                                                    </span>
+                                                </a>
+                                            </span>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="button-footer">
-                                    <a href="contact.html" class="button btn-style3">
-                                        <span>Get Directions</span>
-                                    </a>
+
                                 </div>
                                 <div class="widget-links">
                                     <ul class="links-wrap">
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="portfolio-masonary.html">Projects</a></li>
-                                        <li><a href="pricing.html" class="active">Pricing</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="faq.html">Faq</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a asp-controller="Home" asp-action="AboutUs">About Us</a></li>
+                                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<section class="tf-space flat-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact-title">
+                    <div class="section-title">contact</div>
+                    <h2 class="section-heading">Still Need Query</h2>
+                </div>
+                <form method="post" id="contactform" class="contact-form">
+                    <div class="text-wrap clearfix">
+                        <fieldset class="name-wrap">
+                            <input type="text" id="name" class="tb-my-input" name="name" tabindex="1" placeholder="Enter full name" value="" size="32" aria-required="true" required="">
+                        </fieldset>
+                        <fieldset class="email-wrap">
+                            <input type="email" id="email" class="tb-my-input" name="email" tabindex="2" placeholder="Email" value="" size="32" aria-required="true" required="">
+                        </fieldset>
+                        <fieldset class="site-wrap">
+                            <input type="text" id="phone" class="tb-my-input" name="phone" tabindex="1" placeholder="Phone number" value="" size="32" aria-required="true" required="">
+                        </fieldset>
+                    </div>
+                    <fieldset class="message-wrap">
+<textarea id="comment-message" name="message" rows="8" tabindex="4" placeholder=" Example: Quotation or View Projct Details" aria-required="true"></textarea>
+                    </fieldset>
+                    <button name="submit" type="submit" id="comment-reply" class="button btn-style2"><span>Submit</span></button>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
