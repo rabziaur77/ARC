@@ -57,6 +57,7 @@ namespace ARC.Controllers
             return View();
         }
 
+        [ActionName("Blogs")]
         public IActionResult Blog()
         {
             return View();
