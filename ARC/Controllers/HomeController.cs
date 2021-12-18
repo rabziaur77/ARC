@@ -1,5 +1,7 @@
 ﻿using ARC.Models;
+using ARC.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -9,14 +11,13 @@ using System.Threading.Tasks;
 
 namespace ARC.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : AppController
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IRepo Repo, IConfiguration configuration, ILogger<HomeController> logge)
+            :base(Repo,configuration,logge)
         {
-            _logger = logger;
         }
+
 
         public IActionResult Index()
         {

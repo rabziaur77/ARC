@@ -79,14 +79,14 @@
                                         <a asp-controller="Home" asp-action="Blogs">Blogs</a>
                                     </li>
                                     @*<li class="menu-item menu-item-has-children">
-            <a>Blogs</a>
-            <ul class="sub-menu">
-                <li class="menu-item"><a asp-controller="Home" asp-action="ResidentialBlog">Residential Blog</a></li>
-                <li class="menu-item">
-                    <a asp-controller="Home" asp-action="ComercialBlog">Commercial Blog</a>
-                </li>
-            </ul>
-        </li>*@
+                                            <a>Blogs</a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item"><a asp-controller="Home" asp-action="ResidentialBlog">Residential Blog</a></li>
+                                                <li class="menu-item">
+                                                    <a asp-controller="Home" asp-action="ComercialBlog">Commercial Blog</a>
+                                                </li>
+                                            </ul>
+                                        </li>*@
                                     <li class="menu-item">
                                         <a asp-controller="Home" asp-action="AboutUs">About Us</a>
                                     </li>
@@ -177,8 +177,8 @@
                                 </span>
                             </a>
                             @*<div class="texts">
-                                <h1>Arcik.</h1>
-                            </div>*@
+                                    <h1>Arcik.</h1>
+                                </div>*@
                         </div>
                         <div class="footer-right">
                             <div class="content">
@@ -237,20 +237,85 @@
                             <div class="bottom-content-left link-style-4">Copyright © 2020 by SB Interior Solutions.</div>
                         </div>
                         @*<div class="col-md-6">
-                            <div class="bottom-bar-menu">
-                                <ul class="menu-bottom-menu link-style-4">
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="pricing.html">Pricing</a> </li>
-                                    <li><a href="team.html">Team</a> </li>
-                                </ul>
-                            </div>
-                        </div>*@
+                                <div class="bottom-bar-menu">
+                                    <ul class="menu-bottom-menu link-style-4">
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="pricing.html">Pricing</a> </li>
+                                        <li><a href="team.html">Team</a> </li>
+                                    </ul>
+                                </div>
+                            </div>*@
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+    <section>
+        <div id="formPopup" class="side-menu__block">
+            <div class="side-menu__block-overlay custom-cursor__overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div>
+            <div class="side-menu__block-innerdata">
+                <div class="side-menu__top justify-content-end">
+                    <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="~/assets/icon/close-1-1.png" alt="images"></a>
+                </div>
+                <div class="side-menu__top-introduce pb-5">
+                    <h3 style="text-align: center; font-size: 27px;">
+                        Please fill the form to get access to all our project pics.
+                    </h3>
+                </div>
+                <form onsubmit="SendMessage()">
+                    <div class="widget search">
+                        <div class="row form-group">
+                            <div class="col-md-2">
+                                <span>Your name</span>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" required id="Name" class="form-control" placeholder="Your name" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-2">
+                                <span>Mobile number</span>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" required id="MobileNumber" maxlength="10" class="form-control" placeholder="Mobile number" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-2">
+                                <span>Email Id</span>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" required id="EmailID" class="form-control" placeholder="Email Id" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-2">
+                                <span>Looking For</span>
+                            </div>
+                            <div class="col-md-9">
+                                <select id="lookingfor" required class="form-control">
+                                    <option value="Residential Projects">Residential Projects</option>
+                                    <option value="Corporate Projects">Corporate Projects</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-9">
+                                <button class="button btn-style2" id="submitbtn" style="line-height: 5px;">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button type="button" onclick="Cancel()" class="button btn-style2" style="line-height: 5px;">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <script src="~/assets/js/jquery.min.js"></script>
     <script src="~/assets/js/countto.js"></script>
     <script src="~/assets/js/wow.min.js"></script>
@@ -262,6 +327,10 @@
 
     <script src="~/assets/js/swiper-bundle.min.js"></script>
     <script src="~/assets/js/swiper.js"></script>
+    <script src="~/js/site.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+
+    </script>
 </body>
 </html>
